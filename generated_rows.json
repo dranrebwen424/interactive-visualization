@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "studentCode": "S-001",
+    "strand": "STEM",
+    "sex": "Female",
+    "communicationAnxiety": 3.0320965160279143,
+    "fearOfNegativeEvaluation": 2.9107071779270512,
+    "testAnxiety": 4.313045647502768,
+    "englishClassAnxiety": 3.6016587438781196,
+    "selfConfidence": 3.791734485402621,
+    "languageProficiency": 2.4598504405543036,
+    "peerInfluence": 1.392782241927015,
+    "classroomEnvironment": 4.280825905217404
+  },
+  {
+    "id": 2,
+    "studentCode": "S-002",
+    "strand": "ABM",
+    "sex": "Male",
+    "communicationAnxiety": 2.222128707032097,
+    "fearOfNegativeEvaluation": 2.9741307920170916,
+    "testAnxiety": 4.277313650117181,
+    "englishClassAnxiety": 1.909632196716681,
+    "selfConfidence": 4.309401147554139,
+    "languageProficiency": 2.7000104545682575,
+    "peerInfluence": 3.2677397505704673,
+    "classroomEnvironment": 2.522867179727339
+  },
+  {
+    "id": 3,
+    "studentCode": "S-003",
+    "strand": "HUMSS",
+    "sex": "Female",
+    "communicationAnxiety": 2.298200465449321,
+    "fearOfNegativeEvaluation": 4.876522991780813,
+    "testAnxiety": 3.550515319075066,
+    "englishClassAnxiety": 4.437952511123488,
+    "selfConfidence": 3.1860736450238827,
+    "languageProficiency": 3.372885931759395,
+    "peerInfluence": 2.940481746088061,
+    "classroomEnvironment": 2.206331609379949
+  },
+  {
+    "id": 4,
+    "studentCode": "S-004",
+    "strand": "STEM",
+    "sex": "Male",
+    "communicationAnxiety": 4.6061902122179195,
+    "fearOfNegativeEvaluation": 3.6369619303761302,
+    "testAnxiety": 5.061031064128301,
+    "englishClassAnxiety": 1.7123299677981305,
+    "selfConfidence": 3.0422618762213487,
+    "languageProficiency": 3.6384892837635228,
+    "peerInfluence": 2.5299180858267447,
+    "classroomEnvironment": 0.7863287115737319
+  },
+  {
+    "id": 5,
+    "studentCode": "S-005",
+    "strand": "ABM",
+    "sex": "Female",
+    "communicationAnxiety": 2.6858536248465015,
+    "fearOfNegativeEvaluation": 4.0706125776787285,
+    "testAnxiety": 4.121681339626873,
+    "englishClassAnxiety": 1.9273690619396446,
+    "selfConfidence": 2.078013139150607,
+    "languageProficiency": 3.892769307189926,
+    "peerInfluence": 2.152567961497247,
+    "classroomEnvironment": 2.3403819352981214
+  }
+]
