@@ -10,12 +10,12 @@ import { applyFilters } from './utils/stats';
 
 const ChartCard = ({ title, subtitle, action, children, className = '' }) => (
   <div className={`glass rounded-2xl p-4 flex flex-col ${className}`}>
-    <div className="mb-4 shrink-0 flex justify-between items-start gap-4">
+    <div className="mb-4 shrink-0 flex flex-col sm:flex-row justify-between sm:items-start gap-3 sm:gap-4">
       <div>
         <h3 className="font-heading text-lg font-bold text-ink">{title}</h3>
         {subtitle && <p className="text-xs text-mute mt-0.5">{subtitle}</p>}
       </div>
-      {action && <div className="shrink-0">{action}</div>}
+      {action && <div className="shrink-0 w-full sm:w-auto">{action}</div>}
     </div>
     {children}
   </div>
@@ -119,7 +119,7 @@ const App = () => {
   }
 
   return (
-    <main ref={shellRef} className="h-screen w-screen overflow-hidden bg-background p-3 md:p-4 flex flex-col gap-4 relative">
+    <main ref={shellRef} className="h-[100dvh] w-full overflow-hidden bg-background p-3 md:p-4 flex flex-col gap-4 relative">
       <header data-animate className="mb-6 glass rounded-2xl p-4 shrink-0 flex items-center justify-between z-20">
         <div>
           <h1 className="font-heading text-xl text-ink md:text-2xl">Anxiety Predictors Dashboard</h1>
@@ -197,7 +197,7 @@ const App = () => {
               className="flex-1 min-h-0 flex flex-col"
               action={
                 <select 
-                  className="bg-panel/80 border border-white/10 rounded-lg px-2 py-1.5 text-xs text-ink outline-none focus:border-accent cursor-pointer"
+                  className="w-full sm:w-auto bg-panel/80 border border-white/10 rounded-lg px-2 py-1.5 text-xs text-ink outline-none focus:border-accent cursor-pointer"
                   value={filters.viewMode}
                   onChange={(e) => handleFilterChange('viewMode', e.target.value)}
                 >
@@ -220,7 +220,7 @@ const App = () => {
               className="flex-1 min-h-0 flex flex-col"
               action={
                 <select 
-                  className="bg-panel/80 border border-white/10 rounded-lg px-2 py-1.5 text-xs text-ink outline-none focus:border-accent cursor-pointer max-w-[140px] truncate"
+                  className="w-full sm:w-auto bg-panel/80 border border-white/10 rounded-lg px-2 py-1.5 text-xs text-ink outline-none focus:border-accent cursor-pointer sm:max-w-[160px] truncate"
                   value={filters.predictor}
                   onChange={(e) => handleFilterChange('predictor', e.target.value)}
                 >

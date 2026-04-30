@@ -37,8 +37,8 @@ const CorrelationHeatmap = ({ rows, predictors, dimensions, onInspect }) => {
   }
 
   return (
-    <div className="flex flex-col h-full w-full justify-between gap-2">
-      <div className="flex-1 min-h-0 grid gap-1" style={{ gridTemplateColumns: `minmax(80px, 1fr) repeat(${anxietyOnly.length}, minmax(40px, 1.5fr))` }}>
+    <div className="flex flex-col h-full w-full justify-between gap-2 overflow-x-auto overflow-y-hidden no-scrollbar">
+      <div className="flex-1 min-h-[200px] min-w-[500px] md:min-w-0 grid gap-1" style={{ gridTemplateColumns: `minmax(80px, 1fr) repeat(${anxietyOnly.length}, minmax(40px, 1.5fr))` }}>
         <div />
         {anxietyOnly.map((dimension) => (
           <div key={dimension.key} className="flex items-end justify-center pb-1 text-center text-[9px] sm:text-[11px] leading-tight text-mute break-words hyphens-auto">

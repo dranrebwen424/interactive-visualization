@@ -33,9 +33,10 @@ const ScatterPlot = ({ rows, predictor, dimensions, onInspect }) => {
 
   return (
     <div className="relative w-full h-full flex flex-col">
-      <div className="flex-1 min-h-0 relative">
-        <svg viewBox={`0 0 ${width} ${height}`} className="absolute inset-0 w-full h-full overflow-visible">
-          {/* Grid Lines */}
+      <div className="flex-1 min-h-0 relative w-full overflow-x-auto overflow-y-hidden no-scrollbar">
+        <div className="min-w-[600px] md:min-w-0 w-full h-full relative">
+          <svg viewBox={`0 0 ${width} ${height}`} className="absolute inset-0 w-full h-full overflow-visible">
+            {/* Grid Lines */}
           {Array.from({ length: 5 }).map((_, i) => {
             const val = i + 1;
             const xPos = scale(val, width);
@@ -88,6 +89,7 @@ const ScatterPlot = ({ rows, predictor, dimensions, onInspect }) => {
           <text x={width / 2} y={height - 2} textAnchor="middle" className="fill-mute text-[12px]">{predictor.label}</text>
           <text x="10" y={height / 2} transform={`rotate(-90, 10, ${height / 2})`} textAnchor="middle" className="fill-mute text-[12px]">All Anxiety Dimensions</text>
         </svg>
+        </div>
       </div>
 
       <div className="mt-3 grid grid-cols-2 gap-x-2 gap-y-2 text-[9px] sm:text-[10px] text-mute md:grid-cols-4 shrink-0 px-2 pb-2">

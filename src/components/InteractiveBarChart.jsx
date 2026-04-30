@@ -44,9 +44,10 @@ const InteractiveBarChart = ({ rows, subgroupBy, dimensions, predictors, onInspe
 
   return (
     <div className="relative w-full h-full flex flex-col">
-      <div className="flex-1 min-h-0 relative">
-        <svg viewBox={`0 0 ${width} ${height}`} className="absolute inset-0 w-full h-full overflow-visible">
-          <g transform={`translate(${margin.left} ${margin.top})`}>
+      <div className="flex-1 min-h-0 relative w-full overflow-x-auto overflow-y-hidden no-scrollbar">
+        <div className="min-w-[700px] md:min-w-0 w-full h-full relative">
+          <svg viewBox={`0 0 ${width} ${height}`} className="absolute inset-0 w-full h-full overflow-visible">
+            <g transform={`translate(${margin.left} ${margin.top})`}>
             {Array.from({ length: 6 }).map((_, index) => {
               const y = innerH - (index / 5) * innerH;
               return (
@@ -98,6 +99,7 @@ const InteractiveBarChart = ({ rows, subgroupBy, dimensions, predictors, onInspe
             })}
           </g>
         </svg>
+        </div>
       </div>
 
       <div className="mt-4 grid grid-cols-2 gap-x-3 gap-y-2 text-[10px] sm:text-xs text-mute md:grid-cols-4 shrink-0 px-2 pb-2">

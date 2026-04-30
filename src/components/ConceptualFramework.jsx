@@ -71,11 +71,12 @@ const ConceptualFramework = ({ rows, predictors, dimensions, theoryNodes, onInsp
 
   return (
     <div className="relative w-full h-full flex flex-col">
-      <div className="flex-1 min-h-0 relative">
-        <svg
-          viewBox="0 0 690 420"
-          className="absolute inset-0 w-full h-full cursor-grab rounded-xl border border-white/10 bg-slate-950/40"
-          onWheel={handleWheel}
+      <div className="flex-1 min-h-0 relative w-full overflow-x-auto overflow-y-hidden no-scrollbar">
+        <div className="min-w-[690px] md:min-w-0 w-full h-full relative">
+          <svg
+            viewBox="0 0 690 420"
+            className="absolute inset-0 w-full h-full cursor-grab rounded-xl border border-white/10 bg-slate-950/40"
+            onWheel={handleWheel}
           onMouseDown={startDrag}
           onMouseMove={duringDrag}
           onMouseUp={endDrag}
@@ -152,6 +153,7 @@ const ConceptualFramework = ({ rows, predictors, dimensions, theoryNodes, onInsp
             })}
           </g>
         </svg>
+        </div>
       </div>
 
       {hovered && (
